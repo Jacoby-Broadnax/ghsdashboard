@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GHS Dashboard</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.getJSON('https://api.sheety.co/522f264c-517f-4cf0-9351-bc5c57644244', function (data) {
+        var template = Handlebars.compile($('#item-template').html())
+        $('#items').html(template(data))
+      })
+    })
+  </script>
+  <script id="item-template" type="text/x-handlebars-template">
+
+        {{#each this}}
+     
+        {{/each}}
+    
+    </script>
+</head>
+
+<body>
+
+  <div class="loading-banner animated fadeOut" id="loader" style="">
+
+    <div class="loading-space animated fadeOut delay-1s"><img
+        src="https://thumbs.gfycat.com/PotableEmbarrassedFrenchbulldog-small.gif">
+      <p>Loading</p>
+    </div>
+
+  </div>
+  <nav>
+    <div class="logo-container"><img src="Branding/Logo.svg">
+      <div class="nav-buttons">
+      <a href="index.html">Home</a>
+      <a href="index.html">Give Feedback</a>
+      <a href="index.html">Request Push Notification</a>
+    </div>
+    </div>
+
+  </nav>
+  <div class="spacer"></div>
+  <section>
+    <div class="main-container">
+      <div class="left-sect-container">
+        <h3>Create Media Post</h3>
+      
+        <div class="card-divider"></div>
+        <iframe id="IFrameName" class="post-frame" src="https://distracted-babbage-ff703d.netlify.com/mediapost.html"></iframe>
+     
+      </div>
+      
+    </div>
+    <div class="right-sect-container">
+      <h3>App Preview</h3>
+      <iframe class="preview-frame" src="https://gulfporthighschoolapp.netlify.com/#homescreen"></iframe>
+    </div>
+
+    </div>
+
+  </section>
+
+
+  <script>       window.setTimeout(loaded, 2000);
+
+    var element = document.getElementById('loader');
+
+    function loaded() {
+      element.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
