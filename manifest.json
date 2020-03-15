@@ -1,0 +1,20 @@
+{
+    "short_name": "GHS Workforce Development",
+    "name": "Gulfport High School Workforce Development",
+    "icons": [{
+            "src": "Branding/192px logo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "branding/512px logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "index.html",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "index.html",
+    "theme_color": "#ffffff"
+}
